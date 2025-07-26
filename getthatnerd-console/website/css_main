@@ -1,0 +1,89 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#container {
+  display: flex; /* Horizontal layout: sidebar + main content */
+  height: 100vh;
+  width: 100vw;
+}
+#console_container {
+  flex: 1;   
+  background-image: url('../website_images/website_background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+#console_container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+#console {
+    height: 80%;
+    width: 60%;
+    background-color: #36454f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    border: solid black;
+    border-width: 3px;
+    display: flex;
+    flex-direction: row;
+}
+#sideScreen {
+    height: 100%;
+    width: 25%;
+    border-right: solid black;
+    border-width: 3px;
+    position: relative;
+}
+#mainScreen {
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+#mainScreen {
+  height: 100%;
+  width: 75%;
+  position: relative; /* Must be set for absolute child positioning */
+  overflow: hidden;
+}
+
+#consolePause {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  margin-left: 25%;
+  height: 100%;
+  background-color: #36454f;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  border-left: solid black;
+  border-width: 2px;
+}
+
+.pause-message {
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 100%;
+  text-align: center;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
