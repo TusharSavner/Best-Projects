@@ -1,0 +1,70 @@
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: lightcoral;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.menu-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+
+.menu-button.selected,
+.menu-button:hover {
+    color: gold;
+    text-shadow: 1px 1px black;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+.menu-buttons.selected {
+
+    display: none;
+}
+
+
+#title {
+    font-size: 250%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    color: white;
+}
+#des {
+    font-size: 100%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+
+#main-menu {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body {
+    outline: none;
+}
+
