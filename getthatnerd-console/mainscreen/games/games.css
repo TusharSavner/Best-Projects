@@ -1,0 +1,73 @@
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: lightcoral;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    outline: none;
+}
+
+
+#title {
+    font-size: 250%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+
+#main-menu {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 200px;         
+    overflow-y: auto;           
+    padding-right: 10px;         
+}
+
+#main-menu::-webkit-scrollbar {
+    width: 6px;
+}
+#main-menu::-webkit-scrollbar-thumb {
+    background: gold;
+}
+#main-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.menu-button {
+    display: block;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
+    text-align: left;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+
+.menu-button.selected,
+.menu-button:hover {
+    color: gold;
+    text-shadow: 1px 1px black;
+    animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+#main-menu {
+    user-select: none;
+}
+*:focus {
+    outline: none;
+}
+
